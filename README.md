@@ -11,9 +11,10 @@ Chakra UI used in this app as a frontend library.
 ## How to run this project
 
 To run this project, first create a file with name ".env" and add three enviroment variables:
-PORT =
-MONGO_URI =
-JWT_SECRET =
+
+- PORT =
+- MONGO_URI =
+- JWT_SECRET =
 
 Then simply start the backend first by running commands in root folder,
 
