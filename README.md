@@ -2,13 +2,13 @@
 
 ## Description
 
-This is a chat app build in MERN stack. First, User has to create create by email and password. After creating an account, user will navigate to home page where user can see their chats, and friends.
+This is a chat app build in MERN stack. Chakra UI used in this app as a frontend library.
+First, User has to create create by email and password. After creating an account, user will navigate to home page where user can see their chats, and friends.
 
 This app has feature of one to one chat and group chat. Users can create group and chat them in a group.
 We can also search users by their name that are registered.
 For chat feature, socket io used in this app.
 Also, real time notifications implemented in this app.
-Chakra UI used in this app as a frontend library.
 
 ## How to run this project
 
