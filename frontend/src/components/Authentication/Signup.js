@@ -20,7 +20,7 @@ const Signup = () => {
   const [pic, setPic] = useState();
   const [picLoading, setPicLoading] = useState(false);
 
-   const submitHandler = async () => {
+  const submitHandler = async () => {
     setPicLoading(true);
     if (!name || !email || !password || !confirmpassword) {
       toast({
@@ -71,6 +71,7 @@ const Signup = () => {
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
+      window.location.reload();
       history.push("/chats");
     } catch (error) {
       toast({
@@ -83,7 +84,7 @@ const Signup = () => {
       });
       setPicLoading(false);
     }
-   };
+  };
 
   const postDetails = (pics) => {
     setPicLoading(true);
