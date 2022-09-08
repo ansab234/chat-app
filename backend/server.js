@@ -1,17 +1,12 @@
 const express = require("express");
 const dotenv = require("dotenv");
-// const chats = require("./data/data");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
-const path = require("path");
-// const bodyParser = require('body-parser')
 
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const app = express();
-
-// app.use(bodyParser.json()).use(bodyParser.urlencoded({ extended: true }));
 
 dotenv.config();
 connectDB();
