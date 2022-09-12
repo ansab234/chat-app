@@ -61,7 +61,7 @@ function SideDrawer() {
       toast({
         title: "Please Enter something in search",
         status: "warning",
-        duration: 5000,
+        duration: 1000,
         isClosable: true,
         position: "top-left",
       });
@@ -87,7 +87,7 @@ function SideDrawer() {
         title: "Error Occured!",
         description: "Failed to Load the Search Results",
         status: "error",
-        duration: 5000,
+        duration: 1000,
         isClosable: true,
         position: "bottom-left",
       });
@@ -116,7 +116,7 @@ function SideDrawer() {
         title: "Error fetching the chat",
         description: error.message,
         status: "error",
-        duration: 5000,
+        duration: 1000,
         isClosable: true,
         position: "bottom-left",
       });
@@ -143,7 +143,7 @@ function SideDrawer() {
           </Button>
         </Tooltip>
         <Text fontSize="2xl" fontFamily="Work sans">
-          MERN Chat App
+          ANSAB's Chat App
         </Text>
         <div>
           <Menu>
