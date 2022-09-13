@@ -6,6 +6,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
+import { AiFillEye } from "react-icons/ai";
+import { AiFillEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -93,7 +95,7 @@ const Login = () => {
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+              {show ? <AiFillEye /> : <AiFillEyeInvisible />}
             </Button>
           </InputRightElement>
         </InputGroup>
