@@ -1,4 +1,4 @@
-[Website Link](https://chat-app-ansab.herokuapp.com/)
+[https://chat-app-ansab.herokuapp.com/](https://chat-app-ansab.herokuapp.com/)
 
 # Chat App
 
@@ -11,6 +11,7 @@ This app has feature of one to one chat and group chat. Users can create group a
 We can also search users by their name that are registered.
 For chat feature, socket io used in this app.
 Also, real time notifications implemented in this app.
+also, this project is deployed on Heroku.
 
 ## How to run this project
 
