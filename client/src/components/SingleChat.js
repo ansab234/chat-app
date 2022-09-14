@@ -14,7 +14,7 @@ import animationData from "../animations/typing.json";
 
 import io from "socket.io-client";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "https://mern-my-chat-app.herokuapp.com/"; //http://localhost:5000/
+const ENDPOINT = "https://chat-app-ansab.herokuapp.com/"; //http://localhost:4000/
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -109,15 +109,12 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     socket.on("connected", () => setSocketConnected(true));
     socket.on("typing", () => setIsTyping(true));
     socket.on("stop typing", () => setIsTyping(false));
-
-    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     fetchMessages();
 
     selectedChatCompare = selectedChat;
-    // eslint-disable-next-line
   }, [selectedChat]);
 
   useEffect(() => {
@@ -185,10 +182,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                   />
                 </>
               ) : (
-                <>
-                  {selectedChat.chatName.toUpperCase()}
-                 
-                </>
+                <>{selectedChat.chatName.toUpperCase()}</>
               ))}
           </Text>
           <Box
