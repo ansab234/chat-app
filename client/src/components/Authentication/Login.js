@@ -8,6 +8,7 @@ import { useToast } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
+import { ChatState } from "../../Context/ChatProvider";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -16,6 +17,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const { setUser } = ChatState();
 
   const history = useHistory();
 
@@ -55,9 +58,11 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
+
+      setUser(data);
+
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      window.location.reload();
 
       history.push("/chats");
     } catch (error) {
@@ -72,7 +77,6 @@ const Login = () => {
       setLoading(false);
     }
   };
-
   return (
     <VStack spacing="10px">
       <FormControl id="email" isRequired>

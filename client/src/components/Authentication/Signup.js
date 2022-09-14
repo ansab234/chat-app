@@ -7,12 +7,15 @@ import axios from "axios";
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useHistory } from "react-router-dom";
+import { ChatState } from "../../Context/ChatProvider";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const toast = useToast();
   const history = useHistory();
+
+  const { setUser } = ChatState();
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -70,9 +73,11 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
+      setUser(data);
+
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
-      window.location.reload();
+
       history.push("/chats");
     } catch (error) {
       toast({
