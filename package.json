@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server/server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"nodemon server/server.js\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "ansab",
