@@ -4,7 +4,7 @@
   "description": "This is a mern chat app with 1 on 1 messaging feature and group messaging.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "ansab",
