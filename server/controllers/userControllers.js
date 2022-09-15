@@ -45,14 +45,12 @@ const authUser = asyncHandler(async (req, res) => {
 
   if (user && (await user.matchPassword(password))) {
     res.json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      pic: user.pic,
+      message: `${user.name} Successfully Signed In!!`,
       token: generateToken(user._id),
     });
+    console.log(`${user.name} Signed In Successfully!!`.cyan.bold.underline);
   } else {
-    res.status(401);
+    res.status(401).json({ message: "Invalid Email or Password" });
     throw new Error("Invalid Email or Password");
   }
 });
